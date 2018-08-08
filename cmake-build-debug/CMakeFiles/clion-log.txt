@@ -1,0 +1,4 @@
+C:\Users\username\.CLion2017.3\system\cygwin_cmake\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug -DCMAKE_CXX_COMPILER=C:/cygwin64/bin/g++.exe -G "CodeBlocks - Unix Makefiles" /cygdrive/c/Users/username/Documents/GitHub/Obbligato
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /cygdrive/c/Users/username/Documents/GitHub/Obbligato/cmake-build-debug
