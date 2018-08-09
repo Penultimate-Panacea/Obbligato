@@ -81,3 +81,19 @@ const deque<char> &BaseEightyEight::getOutput() const {
 ostream &operator<<(ostream &os, const BaseEightyEight &eight) {
 
 }
+
+bool BaseEightyEight::operator<(const BaseEightyEight &rhs) const {
+    return base10input < rhs.base10input;
+}
+
+bool BaseEightyEight::operator>(const BaseEightyEight &rhs) const {
+    return rhs < *this;
+}
+
+bool BaseEightyEight::operator<=(const BaseEightyEight &rhs) const {
+    return !(rhs < *this);
+}
+
+bool BaseEightyEight::operator>=(const BaseEightyEight &rhs) const {
+    return !(*this < rhs);
+}

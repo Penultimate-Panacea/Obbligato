@@ -31,6 +31,14 @@ public:
 
     BaseEightyEight operator+(const BaseEightyEight &rhs) const ;
 
+    bool operator<(const BaseEightyEight &rhs) const;
+
+    bool operator>(const BaseEightyEight &rhs) const;
+
+    bool operator<=(const BaseEightyEight &rhs) const;
+
+    bool operator>=(const BaseEightyEight &rhs) const;
+
     BaseEightyEight operator-(const BaseEightyEight &rhs) const ;
 
     BaseEightyEight operator*(const BaseEightyEight &rhs) const ;
