@@ -33,6 +33,22 @@ bool BaseEightyEight::operator!=(const BaseEightyEight &rhs) const {
     return !(rhs == *this);
 }
 
+BaseEightyEight BaseEightyEight::operator+(const BaseEightyEight &rhs) const{
+    return BaseEightyEight(base10input + rhs.base10input);
+}
+
+BaseEightyEight BaseEightyEight::operator-(const BaseEightyEight &rhs) const{
+    return BaseEightyEight(base10input - rhs.base10input);
+}
+
+BaseEightyEight BaseEightyEight::operator*(const BaseEightyEight &rhs) const{
+    return BaseEightyEight(base10input * rhs.base10input);
+}
+
+BaseEightyEight BaseEightyEight::operator/(const BaseEightyEight &rhs) const{
+    return BaseEightyEight(base10input / rhs.base10input);
+}
+
 void BaseEightyEight::setOutput(){
     unsigned int reduction = this->base10input;
     do{
@@ -45,10 +61,9 @@ unsigned int BaseEightyEight::reduce(unsigned int inputInt){
     auto digits = static_cast<char>(inputInt % 88);
     cerr << "Modulo of argument is " << digits << endl;
     char equivalent = this->equivalence[digits]; //identifies the appropriate digit from the const array
-    std::cerr << "The Equivalent base88 digit is" << equivalent << " " << std::endl;
+    cerr << "The Equivalent base88 digit is" << equivalent << " " << endl;
     this->output.insert(this->output.begin(),equivalent); //adds the digit to the front of the output vector
     return (unsigned int)floor(inputInt/88);
-
 }
 
 void BaseEightyEight::printEightyEight(){
