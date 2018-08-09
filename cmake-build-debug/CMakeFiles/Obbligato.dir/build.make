@@ -81,153 +81,9 @@ CMakeFiles/Obbligato.dir/main.cpp.o.provides: CMakeFiles/Obbligato.dir/main.cpp.
 CMakeFiles/Obbligato.dir/main.cpp.o.provides.build: CMakeFiles/Obbligato.dir/main.cpp.o
 
 
-CMakeFiles/Obbligato.dir/Mode.cpp.o: CMakeFiles/Obbligato.dir/flags.make
-CMakeFiles/Obbligato.dir/Mode.cpp.o: ../Mode.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/cygdrive/c/Users/username/Documents/GitHub/Obbligato/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Obbligato.dir/Mode.cpp.o"
-	C:/cygwin64/bin/g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Obbligato.dir/Mode.cpp.o -c /cygdrive/c/Users/username/Documents/GitHub/Obbligato/Mode.cpp
-
-CMakeFiles/Obbligato.dir/Mode.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Obbligato.dir/Mode.cpp.i"
-	C:/cygwin64/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /cygdrive/c/Users/username/Documents/GitHub/Obbligato/Mode.cpp > CMakeFiles/Obbligato.dir/Mode.cpp.i
-
-CMakeFiles/Obbligato.dir/Mode.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Obbligato.dir/Mode.cpp.s"
-	C:/cygwin64/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /cygdrive/c/Users/username/Documents/GitHub/Obbligato/Mode.cpp -o CMakeFiles/Obbligato.dir/Mode.cpp.s
-
-CMakeFiles/Obbligato.dir/Mode.cpp.o.requires:
-
-.PHONY : CMakeFiles/Obbligato.dir/Mode.cpp.o.requires
-
-CMakeFiles/Obbligato.dir/Mode.cpp.o.provides: CMakeFiles/Obbligato.dir/Mode.cpp.o.requires
-	$(MAKE) -f CMakeFiles/Obbligato.dir/build.make CMakeFiles/Obbligato.dir/Mode.cpp.o.provides.build
-.PHONY : CMakeFiles/Obbligato.dir/Mode.cpp.o.provides
-
-CMakeFiles/Obbligato.dir/Mode.cpp.o.provides.build: CMakeFiles/Obbligato.dir/Mode.cpp.o
-
-
-CMakeFiles/Obbligato.dir/Note.cpp.o: CMakeFiles/Obbligato.dir/flags.make
-CMakeFiles/Obbligato.dir/Note.cpp.o: ../Note.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/cygdrive/c/Users/username/Documents/GitHub/Obbligato/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Obbligato.dir/Note.cpp.o"
-	C:/cygwin64/bin/g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Obbligato.dir/Note.cpp.o -c /cygdrive/c/Users/username/Documents/GitHub/Obbligato/Note.cpp
-
-CMakeFiles/Obbligato.dir/Note.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Obbligato.dir/Note.cpp.i"
-	C:/cygwin64/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /cygdrive/c/Users/username/Documents/GitHub/Obbligato/Note.cpp > CMakeFiles/Obbligato.dir/Note.cpp.i
-
-CMakeFiles/Obbligato.dir/Note.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Obbligato.dir/Note.cpp.s"
-	C:/cygwin64/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /cygdrive/c/Users/username/Documents/GitHub/Obbligato/Note.cpp -o CMakeFiles/Obbligato.dir/Note.cpp.s
-
-CMakeFiles/Obbligato.dir/Note.cpp.o.requires:
-
-.PHONY : CMakeFiles/Obbligato.dir/Note.cpp.o.requires
-
-CMakeFiles/Obbligato.dir/Note.cpp.o.provides: CMakeFiles/Obbligato.dir/Note.cpp.o.requires
-	$(MAKE) -f CMakeFiles/Obbligato.dir/build.make CMakeFiles/Obbligato.dir/Note.cpp.o.provides.build
-.PHONY : CMakeFiles/Obbligato.dir/Note.cpp.o.provides
-
-CMakeFiles/Obbligato.dir/Note.cpp.o.provides.build: CMakeFiles/Obbligato.dir/Note.cpp.o
-
-
-CMakeFiles/Obbligato.dir/Chord.cpp.o: CMakeFiles/Obbligato.dir/flags.make
-CMakeFiles/Obbligato.dir/Chord.cpp.o: ../Chord.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/cygdrive/c/Users/username/Documents/GitHub/Obbligato/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Obbligato.dir/Chord.cpp.o"
-	C:/cygwin64/bin/g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Obbligato.dir/Chord.cpp.o -c /cygdrive/c/Users/username/Documents/GitHub/Obbligato/Chord.cpp
-
-CMakeFiles/Obbligato.dir/Chord.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Obbligato.dir/Chord.cpp.i"
-	C:/cygwin64/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /cygdrive/c/Users/username/Documents/GitHub/Obbligato/Chord.cpp > CMakeFiles/Obbligato.dir/Chord.cpp.i
-
-CMakeFiles/Obbligato.dir/Chord.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Obbligato.dir/Chord.cpp.s"
-	C:/cygwin64/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /cygdrive/c/Users/username/Documents/GitHub/Obbligato/Chord.cpp -o CMakeFiles/Obbligato.dir/Chord.cpp.s
-
-CMakeFiles/Obbligato.dir/Chord.cpp.o.requires:
-
-.PHONY : CMakeFiles/Obbligato.dir/Chord.cpp.o.requires
-
-CMakeFiles/Obbligato.dir/Chord.cpp.o.provides: CMakeFiles/Obbligato.dir/Chord.cpp.o.requires
-	$(MAKE) -f CMakeFiles/Obbligato.dir/build.make CMakeFiles/Obbligato.dir/Chord.cpp.o.provides.build
-.PHONY : CMakeFiles/Obbligato.dir/Chord.cpp.o.provides
-
-CMakeFiles/Obbligato.dir/Chord.cpp.o.provides.build: CMakeFiles/Obbligato.dir/Chord.cpp.o
-
-
-CMakeFiles/Obbligato.dir/Pitch.cpp.o: CMakeFiles/Obbligato.dir/flags.make
-CMakeFiles/Obbligato.dir/Pitch.cpp.o: ../Pitch.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/cygdrive/c/Users/username/Documents/GitHub/Obbligato/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Obbligato.dir/Pitch.cpp.o"
-	C:/cygwin64/bin/g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Obbligato.dir/Pitch.cpp.o -c /cygdrive/c/Users/username/Documents/GitHub/Obbligato/Pitch.cpp
-
-CMakeFiles/Obbligato.dir/Pitch.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Obbligato.dir/Pitch.cpp.i"
-	C:/cygwin64/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /cygdrive/c/Users/username/Documents/GitHub/Obbligato/Pitch.cpp > CMakeFiles/Obbligato.dir/Pitch.cpp.i
-
-CMakeFiles/Obbligato.dir/Pitch.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Obbligato.dir/Pitch.cpp.s"
-	C:/cygwin64/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /cygdrive/c/Users/username/Documents/GitHub/Obbligato/Pitch.cpp -o CMakeFiles/Obbligato.dir/Pitch.cpp.s
-
-CMakeFiles/Obbligato.dir/Pitch.cpp.o.requires:
-
-.PHONY : CMakeFiles/Obbligato.dir/Pitch.cpp.o.requires
-
-CMakeFiles/Obbligato.dir/Pitch.cpp.o.provides: CMakeFiles/Obbligato.dir/Pitch.cpp.o.requires
-	$(MAKE) -f CMakeFiles/Obbligato.dir/build.make CMakeFiles/Obbligato.dir/Pitch.cpp.o.provides.build
-.PHONY : CMakeFiles/Obbligato.dir/Pitch.cpp.o.provides
-
-CMakeFiles/Obbligato.dir/Pitch.cpp.o.provides.build: CMakeFiles/Obbligato.dir/Pitch.cpp.o
-
-
-CMakeFiles/Obbligato.dir/Tone.cpp.o: CMakeFiles/Obbligato.dir/flags.make
-CMakeFiles/Obbligato.dir/Tone.cpp.o: ../Tone.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/cygdrive/c/Users/username/Documents/GitHub/Obbligato/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/Obbligato.dir/Tone.cpp.o"
-	C:/cygwin64/bin/g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Obbligato.dir/Tone.cpp.o -c /cygdrive/c/Users/username/Documents/GitHub/Obbligato/Tone.cpp
-
-CMakeFiles/Obbligato.dir/Tone.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Obbligato.dir/Tone.cpp.i"
-	C:/cygwin64/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /cygdrive/c/Users/username/Documents/GitHub/Obbligato/Tone.cpp > CMakeFiles/Obbligato.dir/Tone.cpp.i
-
-CMakeFiles/Obbligato.dir/Tone.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Obbligato.dir/Tone.cpp.s"
-	C:/cygwin64/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /cygdrive/c/Users/username/Documents/GitHub/Obbligato/Tone.cpp -o CMakeFiles/Obbligato.dir/Tone.cpp.s
-
-CMakeFiles/Obbligato.dir/Tone.cpp.o.requires:
-
-.PHONY : CMakeFiles/Obbligato.dir/Tone.cpp.o.requires
-
-CMakeFiles/Obbligato.dir/Tone.cpp.o.provides: CMakeFiles/Obbligato.dir/Tone.cpp.o.requires
-	$(MAKE) -f CMakeFiles/Obbligato.dir/build.make CMakeFiles/Obbligato.dir/Tone.cpp.o.provides.build
-.PHONY : CMakeFiles/Obbligato.dir/Tone.cpp.o.provides
-
-CMakeFiles/Obbligato.dir/Tone.cpp.o.provides.build: CMakeFiles/Obbligato.dir/Tone.cpp.o
-
-
-CMakeFiles/Obbligato.dir/Encoder.cpp.o: CMakeFiles/Obbligato.dir/flags.make
-CMakeFiles/Obbligato.dir/Encoder.cpp.o: ../Encoder.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/cygdrive/c/Users/username/Documents/GitHub/Obbligato/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/Obbligato.dir/Encoder.cpp.o"
-	C:/cygwin64/bin/g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Obbligato.dir/Encoder.cpp.o -c /cygdrive/c/Users/username/Documents/GitHub/Obbligato/Encoder.cpp
-
-CMakeFiles/Obbligato.dir/Encoder.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Obbligato.dir/Encoder.cpp.i"
-	C:/cygwin64/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /cygdrive/c/Users/username/Documents/GitHub/Obbligato/Encoder.cpp > CMakeFiles/Obbligato.dir/Encoder.cpp.i
-
-CMakeFiles/Obbligato.dir/Encoder.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Obbligato.dir/Encoder.cpp.s"
-	C:/cygwin64/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /cygdrive/c/Users/username/Documents/GitHub/Obbligato/Encoder.cpp -o CMakeFiles/Obbligato.dir/Encoder.cpp.s
-
-CMakeFiles/Obbligato.dir/Encoder.cpp.o.requires:
-
-.PHONY : CMakeFiles/Obbligato.dir/Encoder.cpp.o.requires
-
-CMakeFiles/Obbligato.dir/Encoder.cpp.o.provides: CMakeFiles/Obbligato.dir/Encoder.cpp.o.requires
-	$(MAKE) -f CMakeFiles/Obbligato.dir/build.make CMakeFiles/Obbligato.dir/Encoder.cpp.o.provides.build
-.PHONY : CMakeFiles/Obbligato.dir/Encoder.cpp.o.provides
-
-CMakeFiles/Obbligato.dir/Encoder.cpp.o.provides.build: CMakeFiles/Obbligato.dir/Encoder.cpp.o
-
-
 CMakeFiles/Obbligato.dir/BaseEightyEight.cpp.o: CMakeFiles/Obbligato.dir/flags.make
 CMakeFiles/Obbligato.dir/BaseEightyEight.cpp.o: ../BaseEightyEight.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/cygdrive/c/Users/username/Documents/GitHub/Obbligato/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/Obbligato.dir/BaseEightyEight.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/cygdrive/c/Users/username/Documents/GitHub/Obbligato/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Obbligato.dir/BaseEightyEight.cpp.o"
 	C:/cygwin64/bin/g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Obbligato.dir/BaseEightyEight.cpp.o -c /cygdrive/c/Users/username/Documents/GitHub/Obbligato/BaseEightyEight.cpp
 
 CMakeFiles/Obbligato.dir/BaseEightyEight.cpp.i: cmake_force
@@ -252,28 +108,16 @@ CMakeFiles/Obbligato.dir/BaseEightyEight.cpp.o.provides.build: CMakeFiles/Obblig
 # Object files for target Obbligato
 Obbligato_OBJECTS = \
 "CMakeFiles/Obbligato.dir/main.cpp.o" \
-"CMakeFiles/Obbligato.dir/Mode.cpp.o" \
-"CMakeFiles/Obbligato.dir/Note.cpp.o" \
-"CMakeFiles/Obbligato.dir/Chord.cpp.o" \
-"CMakeFiles/Obbligato.dir/Pitch.cpp.o" \
-"CMakeFiles/Obbligato.dir/Tone.cpp.o" \
-"CMakeFiles/Obbligato.dir/Encoder.cpp.o" \
 "CMakeFiles/Obbligato.dir/BaseEightyEight.cpp.o"
 
 # External object files for target Obbligato
 Obbligato_EXTERNAL_OBJECTS =
 
 Obbligato.exe: CMakeFiles/Obbligato.dir/main.cpp.o
-Obbligato.exe: CMakeFiles/Obbligato.dir/Mode.cpp.o
-Obbligato.exe: CMakeFiles/Obbligato.dir/Note.cpp.o
-Obbligato.exe: CMakeFiles/Obbligato.dir/Chord.cpp.o
-Obbligato.exe: CMakeFiles/Obbligato.dir/Pitch.cpp.o
-Obbligato.exe: CMakeFiles/Obbligato.dir/Tone.cpp.o
-Obbligato.exe: CMakeFiles/Obbligato.dir/Encoder.cpp.o
 Obbligato.exe: CMakeFiles/Obbligato.dir/BaseEightyEight.cpp.o
 Obbligato.exe: CMakeFiles/Obbligato.dir/build.make
 Obbligato.exe: CMakeFiles/Obbligato.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/cygdrive/c/Users/username/Documents/GitHub/Obbligato/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable Obbligato.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/cygdrive/c/Users/username/Documents/GitHub/Obbligato/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable Obbligato.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Obbligato.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -282,12 +126,6 @@ CMakeFiles/Obbligato.dir/build: Obbligato.exe
 .PHONY : CMakeFiles/Obbligato.dir/build
 
 CMakeFiles/Obbligato.dir/requires: CMakeFiles/Obbligato.dir/main.cpp.o.requires
-CMakeFiles/Obbligato.dir/requires: CMakeFiles/Obbligato.dir/Mode.cpp.o.requires
-CMakeFiles/Obbligato.dir/requires: CMakeFiles/Obbligato.dir/Note.cpp.o.requires
-CMakeFiles/Obbligato.dir/requires: CMakeFiles/Obbligato.dir/Chord.cpp.o.requires
-CMakeFiles/Obbligato.dir/requires: CMakeFiles/Obbligato.dir/Pitch.cpp.o.requires
-CMakeFiles/Obbligato.dir/requires: CMakeFiles/Obbligato.dir/Tone.cpp.o.requires
-CMakeFiles/Obbligato.dir/requires: CMakeFiles/Obbligato.dir/Encoder.cpp.o.requires
 CMakeFiles/Obbligato.dir/requires: CMakeFiles/Obbligato.dir/BaseEightyEight.cpp.o.requires
 
 .PHONY : CMakeFiles/Obbligato.dir/requires

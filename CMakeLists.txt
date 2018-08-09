@@ -3,4 +3,4 @@ project(Obbligato)
 
 set(CMAKE_CXX_STANDARD 11)
 
-add_executable(Obbligato main.cpp ObbligatoExeceptions.h Encoder.cpp Encoder.h BaseEightyEight.cpp BaseEightyEight.h)
+add_executable(Obbligato main.cpp ObbligatoExeceptions.h BaseEightyEight.cpp BaseEightyEight.h)

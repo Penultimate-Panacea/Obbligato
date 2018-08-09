@@ -86,43 +86,7 @@
 		<Unit filename="/cygdrive/c/Users/username/Documents/GitHub/Obbligato/BaseEightyEight.h">
 			<Option target="Obbligato"/>
 		</Unit>
-		<Unit filename="/cygdrive/c/Users/username/Documents/GitHub/Obbligato/Chord.cpp">
-			<Option target="Obbligato"/>
-		</Unit>
-		<Unit filename="/cygdrive/c/Users/username/Documents/GitHub/Obbligato/Chord.h">
-			<Option target="Obbligato"/>
-		</Unit>
-		<Unit filename="/cygdrive/c/Users/username/Documents/GitHub/Obbligato/Encoder.cpp">
-			<Option target="Obbligato"/>
-		</Unit>
-		<Unit filename="/cygdrive/c/Users/username/Documents/GitHub/Obbligato/Encoder.h">
-			<Option target="Obbligato"/>
-		</Unit>
-		<Unit filename="/cygdrive/c/Users/username/Documents/GitHub/Obbligato/Mode.cpp">
-			<Option target="Obbligato"/>
-		</Unit>
-		<Unit filename="/cygdrive/c/Users/username/Documents/GitHub/Obbligato/Mode.h">
-			<Option target="Obbligato"/>
-		</Unit>
-		<Unit filename="/cygdrive/c/Users/username/Documents/GitHub/Obbligato/Note.cpp">
-			<Option target="Obbligato"/>
-		</Unit>
-		<Unit filename="/cygdrive/c/Users/username/Documents/GitHub/Obbligato/Note.h">
-			<Option target="Obbligato"/>
-		</Unit>
 		<Unit filename="/cygdrive/c/Users/username/Documents/GitHub/Obbligato/ObbligatoExeceptions.h">
-			<Option target="Obbligato"/>
-		</Unit>
-		<Unit filename="/cygdrive/c/Users/username/Documents/GitHub/Obbligato/Pitch.cpp">
-			<Option target="Obbligato"/>
-		</Unit>
-		<Unit filename="/cygdrive/c/Users/username/Documents/GitHub/Obbligato/Pitch.h">
-			<Option target="Obbligato"/>
-		</Unit>
-		<Unit filename="/cygdrive/c/Users/username/Documents/GitHub/Obbligato/Tone.cpp">
-			<Option target="Obbligato"/>
-		</Unit>
-		<Unit filename="/cygdrive/c/Users/username/Documents/GitHub/Obbligato/Tone.h">
 			<Option target="Obbligato"/>
 		</Unit>
 		<Unit filename="/cygdrive/c/Users/username/Documents/GitHub/Obbligato/main.cpp">
