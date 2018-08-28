@@ -1,6 +1,6 @@
 language: cpp
 compiler:
-- g++
+- gcc
 after_success:
 # Creating report
 - cd ${TRAVIS_BUILD_DIR}
