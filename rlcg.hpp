@@ -59,7 +59,7 @@ This assumes a "divide" procedure exists that returns a (quotient,remainder) pai
             static_assert(isPowerOfTwo(M), "M is not a power of two as it should be");
             uint64_t x;
         public:
-            explicit ReversibleLCG(unsigned int seed) : x(seed){}
+            explicit ReversibleLCG(unsigned long seed) : x(seed){} //MODIFIED BY PENULTIMATE_PANACEA
             unsigned int next() {
                 //nextx = (a * x + c) % m;
                 x = (A * x + C) & (M - 1);

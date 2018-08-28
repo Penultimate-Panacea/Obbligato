@@ -91,6 +91,12 @@
 		<Unit filename="/cygdrive/c/Users/Rian/CLionProjects/Obbligato/ObbligatoExeceptions.h">
 			<Option target="Obbligato"/>
 		</Unit>
+		<Unit filename="/cygdrive/c/Users/Rian/CLionProjects/Obbligato/cmake-build-debug/Seed.cpp">
+			<Option target="Obbligato"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Rian/CLionProjects/Obbligato/cmake-build-debug/Seed.h">
+			<Option target="Obbligato"/>
+		</Unit>
 		<Unit filename="/cygdrive/c/Users/Rian/CLionProjects/Obbligato/main.cpp">
 			<Option target="Obbligato"/>
 		</Unit>

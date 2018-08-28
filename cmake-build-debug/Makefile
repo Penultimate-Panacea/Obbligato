@@ -150,6 +150,33 @@ BaseEightyNine.cpp.s:
 	$(MAKE) -f CMakeFiles/Obbligato.dir/build.make CMakeFiles/Obbligato.dir/BaseEightyNine.cpp.s
 .PHONY : BaseEightyNine.cpp.s
 
+Seed.o: Seed.cpp.o
+
+.PHONY : Seed.o
+
+# target to build an object file
+Seed.cpp.o:
+	$(MAKE) -f CMakeFiles/Obbligato.dir/build.make CMakeFiles/Obbligato.dir/Seed.cpp.o
+.PHONY : Seed.cpp.o
+
+Seed.i: Seed.cpp.i
+
+.PHONY : Seed.i
+
+# target to preprocess a source file
+Seed.cpp.i:
+	$(MAKE) -f CMakeFiles/Obbligato.dir/build.make CMakeFiles/Obbligato.dir/Seed.cpp.i
+.PHONY : Seed.cpp.i
+
+Seed.s: Seed.cpp.s
+
+.PHONY : Seed.s
+
+# target to generate assembly for a file
+Seed.cpp.s:
+	$(MAKE) -f CMakeFiles/Obbligato.dir/build.make CMakeFiles/Obbligato.dir/Seed.cpp.s
+.PHONY : Seed.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -189,6 +216,9 @@ help:
 	@echo "... BaseEightyNine.o"
 	@echo "... BaseEightyNine.i"
 	@echo "... BaseEightyNine.s"
+	@echo "... Seed.o"
+	@echo "... Seed.i"
+	@echo "... Seed.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
