@@ -41,7 +41,7 @@ public:
 
     void setBook(unsigned char book);
 
-    unsigned int getSeed() const;
+    unsigned long getSeed() const;
 
     void setSeed();
 

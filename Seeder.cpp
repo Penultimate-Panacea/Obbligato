@@ -8,7 +8,7 @@ unsigned long concatenate(unsigned long i, unsigned long j) { //SOURCE : https:/
     std::string result = "";
     for (; i <= j; ++i)
         result += std::to_string(i);
-    return std::stoi(result);
+    return static_cast<unsigned long>(std::stoi(result));
 }
 unsigned short Seeder::getHall() const {
     return hall;
@@ -69,7 +69,7 @@ std::ostream &operator<<(std::ostream &os, const Seeder &Seeder) {
     return os;
 }
 
-unsigned int Seeder::getSeed() const {
+unsigned long Seeder::getSeed() const {
     return seed;
 }
 
