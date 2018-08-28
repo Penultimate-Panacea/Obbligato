@@ -1,3 +1,3 @@
-/cygdrive/c/Users/username/Documents/GitHub/Obbligato/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/cygdrive/c/Users/username/Documents/GitHub/Obbligato/cmake-build-debug/CMakeFiles/edit_cache.dir
-/cygdrive/c/Users/username/Documents/GitHub/Obbligato/cmake-build-debug/CMakeFiles/Obbligato.dir
+/cygdrive/c/Users/Rian/CLionProjects/Obbligato/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/cygdrive/c/Users/Rian/CLionProjects/Obbligato/cmake-build-debug/CMakeFiles/Obbligato.dir
+/cygdrive/c/Users/Rian/CLionProjects/Obbligato/cmake-build-debug/CMakeFiles/edit_cache.dir
