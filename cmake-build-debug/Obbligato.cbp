@@ -82,12 +82,6 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/cygdrive/c/Users/Rian/CLionProjects/Obbligato/BaseEightyNine.cpp">
-			<Option target="Obbligato"/>
-		</Unit>
-		<Unit filename="/cygdrive/c/Users/Rian/CLionProjects/Obbligato/BaseEightyNine.h">
-			<Option target="Obbligato"/>
-		</Unit>
 		<Unit filename="/cygdrive/c/Users/Rian/CLionProjects/Obbligato/ObbligatoExeceptions.h">
 			<Option target="Obbligato"/>
 		</Unit>
