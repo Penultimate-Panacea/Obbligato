@@ -4,6 +4,9 @@
 
 #include "Seeder.h"
 #include <string>
+#include <iostream>
+
+
 unsigned long concatenate(unsigned long i, unsigned long j) { //SOURCE : https://stackoverflow.com/a/37536245
     std::string result = "";
     for (; i <= j; ++i)
@@ -77,10 +80,15 @@ void Seeder::setSeed() {
     unsigned long tempSeed;
     unsigned long finalSeed;
     tempSeed = concatenate(this->hall, this->floor);
+    std::cerr << "Hall|Floor CONCAT "<< tempSeed;
     tempSeed = concatenate(tempSeed, this->room);
+    std::cerr << "PREV|Room CONCAT "<< tempSeed;
     tempSeed = concatenate(tempSeed, this->wall);
+    std::cerr << "PREV|Wall CONCAT "<< tempSeed;
     tempSeed = concatenate(tempSeed, this->shelf);
+    std::cerr << "PREV|Shelf CONCAT "<< tempSeed;
     tempSeed = concatenate(tempSeed,this->book);
+    std::cerr << "PREV|Book CONCAT "<< tempSeed;
     finalSeed = tempSeed;
     Seeder::seed = finalSeed;
 }

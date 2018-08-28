@@ -83,31 +83,31 @@ CMakeFiles/Obbligato.dir/BaseEightyNine.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Obbligato.dir/BaseEightyNine.cpp.s"
 	/usr/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /cygdrive/c/Users/Rian/CLionProjects/Obbligato/BaseEightyNine.cpp -o CMakeFiles/Obbligato.dir/BaseEightyNine.cpp.s
 
-CMakeFiles/Obbligato.dir/Seed.cpp.o: CMakeFiles/Obbligato.dir/flags.make
-CMakeFiles/Obbligato.dir/Seed.cpp.o: Seed.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/cygdrive/c/Users/Rian/CLionProjects/Obbligato/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Obbligato.dir/Seed.cpp.o"
-	/usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Obbligato.dir/Seed.cpp.o -c /cygdrive/c/Users/Rian/CLionProjects/Obbligato/cmake-build-debug/Seed.cpp
+CMakeFiles/Obbligato.dir/Seeder.cpp.o: CMakeFiles/Obbligato.dir/flags.make
+CMakeFiles/Obbligato.dir/Seeder.cpp.o: ../Seeder.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/cygdrive/c/Users/Rian/CLionProjects/Obbligato/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Obbligato.dir/Seeder.cpp.o"
+	/usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Obbligato.dir/Seeder.cpp.o -c /cygdrive/c/Users/Rian/CLionProjects/Obbligato/Seeder.cpp
 
-CMakeFiles/Obbligato.dir/Seed.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Obbligato.dir/Seed.cpp.i"
-	/usr/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /cygdrive/c/Users/Rian/CLionProjects/Obbligato/cmake-build-debug/Seed.cpp > CMakeFiles/Obbligato.dir/Seed.cpp.i
+CMakeFiles/Obbligato.dir/Seeder.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Obbligato.dir/Seeder.cpp.i"
+	/usr/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /cygdrive/c/Users/Rian/CLionProjects/Obbligato/Seeder.cpp > CMakeFiles/Obbligato.dir/Seeder.cpp.i
 
-CMakeFiles/Obbligato.dir/Seed.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Obbligato.dir/Seed.cpp.s"
-	/usr/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /cygdrive/c/Users/Rian/CLionProjects/Obbligato/cmake-build-debug/Seed.cpp -o CMakeFiles/Obbligato.dir/Seed.cpp.s
+CMakeFiles/Obbligato.dir/Seeder.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Obbligato.dir/Seeder.cpp.s"
+	/usr/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /cygdrive/c/Users/Rian/CLionProjects/Obbligato/Seeder.cpp -o CMakeFiles/Obbligato.dir/Seeder.cpp.s
 
 # Object files for target Obbligato
 Obbligato_OBJECTS = \
 "CMakeFiles/Obbligato.dir/main.cpp.o" \
 "CMakeFiles/Obbligato.dir/BaseEightyNine.cpp.o" \
-"CMakeFiles/Obbligato.dir/Seed.cpp.o"
+"CMakeFiles/Obbligato.dir/Seeder.cpp.o"
 
 # External object files for target Obbligato
 Obbligato_EXTERNAL_OBJECTS =
 
 Obbligato.exe: CMakeFiles/Obbligato.dir/main.cpp.o
 Obbligato.exe: CMakeFiles/Obbligato.dir/BaseEightyNine.cpp.o
-Obbligato.exe: CMakeFiles/Obbligato.dir/Seed.cpp.o
+Obbligato.exe: CMakeFiles/Obbligato.dir/Seeder.cpp.o
 Obbligato.exe: CMakeFiles/Obbligato.dir/build.make
 Obbligato.exe: CMakeFiles/Obbligato.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/cygdrive/c/Users/Rian/CLionProjects/Obbligato/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable Obbligato.exe"
