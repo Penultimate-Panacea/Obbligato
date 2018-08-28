@@ -51,7 +51,7 @@ void BaseEightyNine::setB89(){
     unsigned int reduction = this->base10input;
     do{
     reduction = reduce(reduction);
-    } while (reduction !=0);
+    } while (reduction != 0);
 }
 
 unsigned int BaseEightyNine::reduce(unsigned int inputInt){
