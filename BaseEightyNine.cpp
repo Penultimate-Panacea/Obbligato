@@ -8,7 +8,6 @@
 
 using namespace std;
 
-
 BaseEightyNine::BaseEightyNine(unsigned int base10input) : base10input(base10input) {
     setBase10input(base10input);
     setB89();
