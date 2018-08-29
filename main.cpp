@@ -23,6 +23,7 @@ int main() {
     for (int i = 0; i < 99; ++i) {
         std::cout << reRng.next()%89 << std::endl;
     }
+
         return 0;
 }
 

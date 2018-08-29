@@ -47,7 +47,7 @@ BaseEightyNine BaseEightyNine::operator/(const BaseEightyNine &rhs) const{
 void BaseEightyNine::setB89(){
     unsigned int reduction = this->base10input;
     do{
-    reduction = reduce(reduction);
+        reduction = reduce(reduction);
     } while (reduction != 0);
 }
 
@@ -72,10 +72,6 @@ void BaseEightyNine::printEightyEight(){
 
 const deque<char> &BaseEightyNine::getB89() const {
     return b89;
-}
-
-ostream &operator<<(ostream &os, const BaseEightyNine &eight) {
-
 }
 
 bool BaseEightyNine::operator<(const BaseEightyNine &rhs) const {
