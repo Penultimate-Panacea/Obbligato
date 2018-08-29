@@ -1,5 +1,5 @@
 //
-// Created by username on 8/8/2018.
+// Created by Penultimate-Panacea on 8/8/2018.
 //
 
 #include "BaseEightyNine.h"
@@ -15,8 +15,6 @@ BaseEightyNine::BaseEightyNine(unsigned int base10input) : base10input(base10inp
 }
 
 BaseEightyNine::~BaseEightyNine() = default;
-
-
 
 void BaseEightyNine::setBase10input(unsigned int base10input) {
     BaseEightyNine::base10input = base10input;
@@ -56,11 +54,11 @@ void BaseEightyNine::setB89(){
 
 unsigned int BaseEightyNine::reduce(unsigned int inputInt){
     cerr << "Reduce called with " << inputInt << " as argument." << endl;
-    auto digits = static_cast<char>(inputInt % 89);
+    char digits = (inputInt % 89);
     cerr << "Modulo of argument is " << digits << endl;
-    char equivalent;
-    equivalent = BaseEightyNine::equivalence[digits]; //identifies the appropriate digit from the const array
-    cerr << "The Equivalent base88 digit is" << equivalent << " " << endl;
+    //char equivalent;
+    char equivalent = BaseEightyNine::equivalenceTable[digits]; //identifies the appropriate digit from the const array
+    cerr << "The Equivalent base89 digit is" << equivalent << " " << endl;
     this->b89.insert(this->b89.begin(),equivalent); //adds the digit to the front of the b89 vector
     return (unsigned int)floor(inputInt/89);
 }
@@ -80,7 +78,7 @@ const deque<char> &BaseEightyNine::getB89() const {
 ostream &operator<<(ostream &os, const BaseEightyNine &eight) {
 
 }
-/*
+
 bool BaseEightyNine::operator<(const BaseEightyNine &rhs) const {
     return base10input < rhs.base10input;
 }
@@ -96,4 +94,3 @@ bool BaseEightyNine::operator<=(const BaseEightyNine &rhs) const {
 bool BaseEightyNine::operator>=(const BaseEightyNine &rhs) const {
     return !(*this < rhs);
 }
-*/

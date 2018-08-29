@@ -1,5 +1,5 @@
 //
-// Created by Penultimate-Panacea  on 8/8/2018.
+// Created by Penultimate-Panacea on 8/8/2018.
 //
 #include <string>
 #include <deque>
@@ -10,17 +10,18 @@
 
 
 class BaseEightyNine {
-private:
+public:
     unsigned int base10input; //
     std::deque<char> b89; //Raw form of the b89
-    static constexpr char equivalence[89] = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E',
-                                             'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T',
-                                             'U', 'V', 'W', 'X', 'Y', 'Z', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i',
-                                             'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x',
-                                             'y', 'z', '!', '<', '#', '$', '%', '&', '>', '(', ')', '*', '+', ',', '-',
-                                             '.', '/', '[', '?', ']', '^', '_', '`', '{', '|', '}', '~', '@','\\'};
+    static constexpr char equivalenceTable[89] = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D',
+                                                  'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R',
+                                                  'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', 'a', 'b', 'c', 'd', 'e', 'f',
+                                                  'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't',
+                                                  'u', 'v', 'w', 'x', 'y', 'z', '!', '<', '#', '$', '%', '&', '>', '(',
+                                                  ')', '*', '+', ',', '-', '.', '/', '[', '?', ']', '^', '_', '`', '{',
+                                                  '|', '}', '~', '@','\\'};
     // Provides the symbol set for the numbers in base 89
-public:
+//public:
     explicit BaseEightyNine(unsigned int base10input = 0);
 
     virtual ~BaseEightyNine();
@@ -57,10 +58,6 @@ public:
 
     friend std::ostream &operator<<(std::ostream &os, const BaseEightyNine &eight);
 
-
 };
-
-
-
 
 #endif //OBBLIGATO_BASEEIGHTYEIGHT_H
