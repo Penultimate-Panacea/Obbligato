@@ -32,7 +32,7 @@ public:
 
     void setB89();
 
-    void printEightyEight();
+    char firstChar();
 
     const std::deque<char> &getB89() const;
 
@@ -41,6 +41,7 @@ public:
     bool operator!=(const BaseEightyNine &rhs) const;
 
     BaseEightyNine operator+(const BaseEightyNine &rhs) const ;
+
 
     bool operator<(const BaseEightyNine &rhs) const;
 
