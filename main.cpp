@@ -20,8 +20,8 @@ int main() {
     BaseEightyNine tempnum;
     Seeder testSeeder(0,0,0,0,0,1);
     rlcg::ReversibleLCG reRng(testSeeder.getSeed());
-    for (int i = 0; i < 99; ++i) {
-        std::cout << reRng.next()%89 << std::endl;
+    for (int i = 0; i < 3201; ++i) {
+        std::cout << BaseEightyNine(reRng.next()).firstChar();
     }
 
         return 0;
