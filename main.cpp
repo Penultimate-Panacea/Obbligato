@@ -5,7 +5,7 @@
 #include "BaseEightyNine.h"
 
 void loggingStart(){
-    freopen("output.txt", "w", stdout);
+    freopen("output2.csv", "w", stdout); //semicolon deliminated
     freopen("debug.txt", "w", stderr);
 }
 /*
@@ -21,9 +21,9 @@ int main() {
     Seeder testSeeder(0,0,0,0,0,1);
     rlcg::ReversibleLCG reRng(testSeeder.getSeed());
     for (int i = 0; i < 3201; ++i) {
-        std::cout << BaseEightyNine(reRng.next()).firstChar();
+        std::cout << BaseEightyNine(reRng.next()).firstChar() << ";";
     }
 
-        return 0;
+    return 0;
 }
 
