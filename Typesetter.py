@@ -16,31 +16,40 @@ equivalentTimes = {'0': '64', '1': '32', '2': '16', '3': '8', '4': '4', '5': '2'
 
 
 def readtones():
-    """ Reads tones from solid stream of Base89 in a .txt file """
+    """ Reads tones from a continuous non delimited of Base89 in a .txt file
+        Returns a list """
     toneList = []
-    with open("testOutputTone.txt") as f1:
+    with open("testOutputTone.txt") as f:
         while True:
-            c1 = f1.read(1)
-            if not c1:
+            c = f.read(1)
+            if not c:
                 print("File read complete.")
-                f1.close()
+                f.close()
                 break
-            toneList.append(equivalentTones[c1])
+            toneList.append(equivalentTones[c])
     return toneList
 
 
 def readtimes():
-    """ Reads times from solid stream of Base10 in a .txt file """
+    """ Reads times from a continuous non delimited of Base10 in a .txt file
+        Returns a list """
     timeList = []
-    with open("testOutputTime.txt") as f2:
+    with open("testOutputTime.txt") as f:
         while True:
-            c2 = f2.read(1)
-            if not c2:
+            c = f.read(1)
+            if not c:
                 print("File read complete.")
-                f2.close()
+                f.close()
                 break
-            timeList.append(equivalentTimes[c2])
+            timeList.append(equivalentTimes[c])
     return timeList
 
-times = readtimes()
 tones = readtones()
+times = readtimes()
+
+if times.__len__() == tones.__len__():
+    notes = dict(zip(tones, times))
+else:
+    print("Size of outputTime and outputTone do not match")
+    quit(3)
+print(notes)
