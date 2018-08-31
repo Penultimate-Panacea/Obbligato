@@ -5,7 +5,7 @@
 #include "BaseEightyNine.h"
 
 void loggingStart(){
-    freopen("output2.csv", "w", stdout); //semicolon deliminated
+    freopen("output2.csv", "w", stdout);
     freopen("debug.txt", "w", stderr);
 }
 /*
@@ -17,13 +17,17 @@ int test(int argc, char* argv[]) {
 
 int main() {
     loggingStart();
-    BaseEightyNine tempnum;
     Seeder testSeeder(0,0,0,0,0,1);
-    rlcg::ReversibleLCG reRng(testSeeder.getSeed());
+    rlcg::ReversibleLCG reRngTone(testSeeder.getSeed());
+    freopen("outputTone.txt", "w", stdout);
     for (int i = 0; i < 3201; ++i) {
-        std::cout << BaseEightyNine(reRng.next()).firstChar() << ";";
+        std::cout << BaseEightyNine(reRngTone.next()).firstChar();
     }
-
+    rlcg::ReversibleLCG reRngTime(testSeeder.getSeed());
+    freopen("outputTime.txt", "w", stdout);
+    for (int i = 0; i < 3201; ++i){
+        std::cout << (reRngTime.next() % 10);
+    }
     return 0;
 }
 
