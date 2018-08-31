@@ -1,4 +1,4 @@
-#import mingus.core.notes as notes
+
 equivalentTones = {'0': 'A0', '1': 'A0#', '2': 'B0', '3': 'C1', '4': 'C1#', '5': 'D1', '6': 'D1#', '7': 'E1', '8': 'F1',
                    '9': 'F1#', 'A': 'G1', 'B': 'G1#', 'C': 'A1', 'D': 'A1#', 'E': 'B1', 'F': 'C2', 'G': 'C2#', 'H': 'D2',
                    'I': 'D2#', 'J': 'E2', 'K': 'F2', 'L': 'F2#', 'M': 'G2', 'N': 'G2#', 'O': 'A2', 'P': 'A2#', 'Q': 'B2',
@@ -52,4 +52,3 @@ if times.__len__() == tones.__len__():
 else:
     print("Size of outputTime and outputTone do not match")
     quit(3)
-print(notes)
