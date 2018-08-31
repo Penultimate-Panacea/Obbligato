@@ -9,13 +9,27 @@ equivalentTones = {'0': 'A0', '1': 'A0#', '2': 'B0', '3': 'C1', '4': 'C1#', '5':
                    '<': 'C6', '#': 'C6#', '$': 'D6', '%': 'D6#', '&': 'E6', '>': 'F6', '(': 'F6#', ')': 'G6', '*': 'G6#',
                    '+': 'A6', ',': 'A6#', '-': "B6", '.': 'C7', '/': 'C7#', '[': 'D7', '?': 'D7#', ']': 'E7', '^': 'F7',
                    '_': 'F7#', '`': 'G7', '{': 'G7#', '|': 'A7', '}': 'A7#', '~': 'B7', '@': 'C8', '\\': 'RE'}
+equivalentTimes = {0: '64', 1: '32', 2: '16', 3: '8', 4: '4', 5: '2', 6: '1', 7: '0', 8: 'triplet', 9: 'grace'} 
+# 64=1/64 note 32=1/32 note 16=1/16th note 8=1/8th note 4=1/4th note 
+# 2=1/2 note 1=whole note 0= 2 tied whole 8=triplet 9=grace note
 toneList = []
-with open("testoutput.txt") as f:
+with open("testOutputTone.txt") as f1:
     while True:
-        c = f.read(1)
+        c = f1.read(1)
         if not c:
             print("File read complete.")
-            f.close()
+            f1.close()
             break
         toneList.append(equivalentTones[c])
     print(toneList)
+
+timeList = []
+with open("testOutputTime.txt") as f2:
+    while True:
+        c = f2.read(1)
+        if not c:
+            print("File read complete.")
+            f2.close()
+            break
+        timeList.append(equivalentTimes[c])
+    print(timeList)
