@@ -6,6 +6,7 @@
 *.lo
 *.o
 *.obj
+*.make
 
 # Precompiled Headers
 *.gch
@@ -34,3 +35,6 @@
 # IDE related
 *.xml
 *.iml
+
+# Folders
+cmake-build-debug
