@@ -5,7 +5,7 @@
 #include "BaseEightyNine.h"
 
 void loggingStart(){
-    freopen("output2.csv", "w", stdout);
+    //freopen("output2.csv", "w", stdout);
     freopen("debug.txt", "w", stderr);
 }
 /*
