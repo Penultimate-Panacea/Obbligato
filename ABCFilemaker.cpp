@@ -3,21 +3,17 @@
 //
 
 #include "ABCFilemaker.hpp"
+#include "CustomExceptions.hpp"
+#include <iostream>
+#include <fstream>
+#include <algorithm>
 
-const std::vector<char> &ABCFilemaker::getTimes() const {
-    return times;
+const std::vector<std::pair<char, char>> &ABCFilemaker::getNotes() const {
+    return notes;
 }
 
-void ABCFilemaker::setTimes(const std::vector<char> &times) {
-    ABCFilemaker::times = times;
-}
-
-const std::vector<char> &ABCFilemaker::getTones() const {
-    return tones;
-}
-
-void ABCFilemaker::setTones(const std::vector<char> &tones) {
-    ABCFilemaker::tones = tones;
+void ABCFilemaker::setNotes(const std::vector<std::pair<char, char>> &notes) {
+    ABCFilemaker::notes = notes;
 }
 
 const std::string &ABCFilemaker::getTimeInputFilePath() const {
@@ -71,3 +67,30 @@ const std::string &ABCFilemaker::getTuneType() const {
 const char ABCFilemaker::getMeasureLength() const {
     return measureLength;
 }
+
+ABCFilemaker::ABCFilemaker(const std::string &timeInputFilePath, const std::string &toneInputFilePath,
+                           const std::string &outputFilePath) : timeInputFilePath(timeInputFilePath),
+                                                                toneInputFilePath(toneInputFilePath),
+                                                                outputFilePath(outputFilePath) {
+    //Load times into char vector
+    std::ifstream timeFile(timeInputFilePath, std::ios::binary);
+    std::vector<char> timeFileContents((std::istreambuf_iterator<char>(timeFile)),std::istreambuf_iterator<char>());
+    //Load tones into char vector
+    std::ifstream toneFile(toneInputFilePath, std::ios::binary);
+    std::vector<char> toneFileContents((std::istreambuf_iterator<char>(toneFile)),std::istreambuf_iterator<char>());
+    //Verify the vectors are the same length
+    if (timeFileContents.size() != toneFileContents.size()){
+        throw CustomException::TempFileLengthMismatch();
+        //throw CustomException::FileLengthMismatch(timeInputFilePath, toneInputFilePath);
+    }
+    //Merge vectors into notes vector
+    std::vector<std::pair<char, char>> merge;
+    merge.reserve(timeFileContents.size());
+    std::transform(timeFileContents.begin(), timeFileContents.end(), toneFileContents.begin(), std::back_inserter(merge),
+                   [](char a, char b) { return std::make_pair(a, b); });
+    ABCFilemaker::setNotes(merge);
+}
+
+ABCFilemaker::~ABCFilemaker() = default;
+
+

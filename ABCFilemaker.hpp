@@ -7,54 +7,51 @@
 
 #include <vector>
 #include <string>
+
 class ABCFilemaker {
+    /** \class
+     * Creates a .abc file from the output files from main.
+     */
+
 private:
-    std::vector<char>times;
-    std::vector<char>tones;
+    std::vector<std::pair<char, char>> notes; //Joined vector of tones and times as <tone, time>
     std::string timeInputFilePath;
     std::string toneInputFilePath;
     std::string outputFilePath;
     std::string seedLocation; //T:
+    char buffer;
     const char key = 'C'; //K:
     const char timeSig = 'C'; //M:
     const std::string defaultNoteLength = "1/4"; //L:
     const std::string tuneType = "Obbligato"; //R:
     const char measureLength = 4;
-public:
-    const char getKey() const;
-
-    const char getTimeSig() const;
-
-    const std::string &getDefaultNoteLength() const;
-
-    const std::string &getTuneType() const;
-
-    const char getMeasureLength() const;
 
 public:
-    const std::vector<char> &getTimes() const;
+    //Setters & Getters
+    const std::vector<std::pair<char, char>> &getNotes() const;
 
-    void setTimes(const std::vector<char> &times);
-
-    const std::vector<char> &getTones() const;
-
-    void setTones(const std::vector<char> &tones);
+    void setNotes(const std::vector<std::pair<char, char>> &notes);
 
     const std::string &getTimeInputFilePath() const;
 
     void setTimeInputFilePath(const std::string &timeInputFilePath);
 
-    const std::string &getToneInputFilePath() const;
-
     void setToneInputFilePath(const std::string &toneInputFilePath);
-
-    const std::string &getOutputFilePath() const;
 
     void setOutputFilePath(const std::string &outputFilePath);
 
     const std::string &getSeedLocation() const;
 
     void setSeedLocation(const std::string &seedLocation);
+
+    //Constructors & Destructors
+    ABCFilemaker(const std::string &timeInputFilePath, const std::string &toneInputFilePath,
+                 const std::string &outputFilePath);
+
+    virtual ~ABCFilemaker();
+    //Core Methods
+
+
 };
 
 
