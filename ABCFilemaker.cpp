@@ -24,16 +24,8 @@ void ABCFilemaker::setTimeInputFilePath(const std::string &timeInputFilePath) {
     ABCFilemaker::timeInputFilePath = timeInputFilePath;
 }
 
-const std::string &ABCFilemaker::getToneInputFilePath() const {
-    return toneInputFilePath;
-}
-
 void ABCFilemaker::setToneInputFilePath(const std::string &toneInputFilePath) {
     ABCFilemaker::toneInputFilePath = toneInputFilePath;
-}
-
-const std::string &ABCFilemaker::getOutputFilePath() const {
-    return outputFilePath;
 }
 
 void ABCFilemaker::setOutputFilePath(const std::string &outputFilePath) {
@@ -48,25 +40,6 @@ void ABCFilemaker::setSeedLocation(const std::string &seedLocation) {
     ABCFilemaker::seedLocation = seedLocation;
 }
 
-const char ABCFilemaker::getKey() const {
-    return key;
-}
-
-const char ABCFilemaker::getTimeSig() const {
-    return timeSig;
-}
-
-const std::string &ABCFilemaker::getDefaultNoteLength() const {
-    return defaultNoteLength;
-}
-
-const std::string &ABCFilemaker::getTuneType() const {
-    return tuneType;
-}
-
-const char ABCFilemaker::getMeasureLength() const {
-    return measureLength;
-}
 
 ABCFilemaker::ABCFilemaker(const std::string &timeInputFilePath, const std::string &toneInputFilePath,
                            const std::string &outputFilePath) : timeInputFilePath(timeInputFilePath),
@@ -92,5 +65,9 @@ ABCFilemaker::ABCFilemaker(const std::string &timeInputFilePath, const std::stri
 }
 
 ABCFilemaker::~ABCFilemaker() = default;
+
+std::string ABCFilemaker::noteTranslate() {
+
+}
 
 
