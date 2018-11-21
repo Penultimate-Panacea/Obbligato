@@ -3,6 +3,7 @@
 //
 
 #include "BaseEightyNine.h"
+#include "EquivalenceTables.hpp"
 #include <cmath>
 #include <iostream>
 
@@ -56,7 +57,7 @@ unsigned int BaseEightyNine::reduce(unsigned int inputInt){
     char digits = (inputInt % 89);
     cerr << "Modulo of argument is: " << digits << endl;
     //char equivalent;
-    char equivalent = BaseEightyNine::equivalenceTable[digits]; //identifies the appropriate digit from the const array
+    char equivalent = Equivalence::b89CharSet[digits]; //identifies the appropriate digit from the const array
     cerr << "The Equivalent base89 digit is: " << equivalent << " " << endl;
     this->b89.insert(this->b89.begin(),equivalent); //adds the digit to the front of the b89 vector
     return (unsigned int)floor(inputInt/89);
