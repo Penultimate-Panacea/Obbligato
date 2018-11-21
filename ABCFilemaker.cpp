@@ -82,19 +82,22 @@ std::string ABCFilemaker::noteTranslate(std::pair<char, char> note) {
 };
 
 void ABCFilemaker::makeABCfile() {
-    freopen("output.abc", "w", stdout);
-    std::cout << abcFileHeader();
-    fclose(stdout);
+    std::string header = abcFileHeader();
+    //freopen("output.abc", "w", stdout);
+    std::ofstream file("output.abc");
+    file << header;
+    //fclose(stdout);
 };
 
 std::string ABCFilemaker::abcFileHeader() {
     std::string header;
-    header + "X: 1\n";
-    header + "T: " + seedLocation + "\n";
-    header + "C: " + composer  + "\n";
-    header + "L: " + defaultNoteLength  + "\n";
-    header + "M: " + timeSig  + "\n";
-    header + "R: " + tuneType  + "\n";
-    header + "K: " + key  + "\n";
+    header.append("X: 1 \n");
+    header.append("T: ");
+    header.append(seedLocation + "\n");
+    header.append("C: " + composer  + "\n");
+    header.append("L: " + defaultNoteLength  + "\n");
+    header.append("M: " + timeSig + "\n");
+    header.append("R: " + tuneType  + "\n");
+    header.append("K: " + key  + "\n");
     return header;
 }
