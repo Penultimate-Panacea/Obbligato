@@ -76,7 +76,7 @@ std::string ABCFilemaker::noteTranslate(std::pair<char, char> note) {
     char tone = note.first;
     char time = note.second;
     auto it = std::find(Equivalence::b89CharSetVec.begin(), Equivalence::b89CharSetVec.end(), tone);
-    char index = static_cast<char> (std::distance(Equivalence::b89CharSetVec.begin(), it));
+    long index = (std::distance(Equivalence::b89CharSetVec.begin(), it));
     abcNote = Equivalence::abcToneStringSetVec.at(index);
     abcNote + Equivalence::abcTimeStringSetVec.at(time);
     return abcNote;
