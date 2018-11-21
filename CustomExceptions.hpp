@@ -12,8 +12,7 @@ namespace CustomException {
 
     struct TempFileLengthMismatch: public std::exception
     {
-        const char * what () const throw ()
-        {
+        const char * what () const noexcept {
             return "Input files are not of the same size";
         }
     };

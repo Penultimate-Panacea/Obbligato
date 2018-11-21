@@ -8,7 +8,7 @@
 
 
 unsigned long concatenate(unsigned long i, unsigned long j) { //SOURCE : https://stackoverflow.com/a/37536245
-    std::string result = "";
+    std::string result;
     for (; i <= j; ++i)
         result += std::to_string(i);
     return static_cast<unsigned long>(std::stoi(result));
