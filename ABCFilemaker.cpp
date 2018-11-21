@@ -38,9 +38,10 @@ void ABCFilemaker::setSeedLocation(const std::string &seedLocation) {
     ABCFilemaker::seedLocation = seedLocation;
 }
 
-ABCFilemaker::ABCFilemaker(const std::string &timeInputFilePath, const std::string &toneInputFilePath)
-                                                                : timeInputFilePath(timeInputFilePath),
-                                                                toneInputFilePath(toneInputFilePath){
+ABCFilemaker::ABCFilemaker(const std::string &timeInputFilePath, const std::string &toneInputFilePath,
+                           const std::string &seedLocation) : timeInputFilePath(timeInputFilePath),
+                                                              toneInputFilePath(toneInputFilePath),
+                                                              seedLocation(seedLocation) {
     //Load times into char vector
     std::ifstream timeFile(timeInputFilePath, std::ios::binary);
     std::vector<char> timeFileContents((std::istreambuf_iterator<char>(timeFile)),std::istreambuf_iterator<char>());
@@ -57,8 +58,7 @@ ABCFilemaker::ABCFilemaker(const std::string &timeInputFilePath, const std::stri
     merge.reserve(toneFileContents.size());
     std::transform(toneFileContents.begin(), toneFileContents.end(), timeFileContents.begin(), std::back_inserter(merge),
                    [](char a, char b) { return std::make_pair(a, b); });
-    ABCFilemaker::setNotes(merge);
-}
+    ABCFilemaker::setNotes(merge);}
 
 ABCFilemaker::~ABCFilemaker() = default;
 
@@ -77,7 +77,7 @@ std::string ABCFilemaker::noteTranslate(std::pair<char, char> note) {
     char time = note.second;
     auto it = std::find(Equivalence::b89CharSetVec.begin(), Equivalence::b89CharSetVec.end(), tone);
     long index = (std::distance(Equivalence::b89CharSetVec.begin(), it));
-    abcNote = Equivalence::abcToneStringSetVec.at(index);
+    abcNote = Equivalence::abcToneStringSetVec.at(static_cast<unsigned long>(index));
     abcNote + Equivalence::abcTimeStringSetVec.at(time);
     return abcNote;
 };

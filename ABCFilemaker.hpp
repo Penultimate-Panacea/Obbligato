@@ -18,7 +18,6 @@ private:
     std::string timeInputFilePath;
     std::string toneInputFilePath;
     std::string seedLocation; //T:
-    char buffer;
     const char key = 'C'; //K:
     const char timeSig = 'C'; //
     const std::string defaultNoteLength = "1"; //L:
@@ -37,14 +36,15 @@ public:
 
     void setToneInputFilePath(const std::string &toneInputFilePath);
 
-    void setOutputFilePath(const std::string &outputFilePath);
-
     const std::string &getSeedLocation() const;
 
     void setSeedLocation(const std::string &seedLocation);
 
     //Constructors & Destructors
     ABCFilemaker(const std::string &timeInputFilePath, const std::string &toneInputFilePath);
+
+    ABCFilemaker(const std::string &timeInputFilePath, const std::string &toneInputFilePath,
+                 const std::string &seedLocation);
 
     virtual ~ABCFilemaker();
 
