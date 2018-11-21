@@ -10,8 +10,8 @@
 
 class Seeder {
 public:
-    Seeder(unsigned short hall, unsigned short floor, unsigned short room, unsigned char wall, unsigned char shelf,
-         unsigned char book);
+    Seeder(unsigned short hall, unsigned short floor, unsigned short room, unsigned short wall, unsigned short shelf,
+         unsigned short book);
 
     virtual ~Seeder();
 
@@ -29,17 +29,17 @@ public:
 
     void setRoom(unsigned short room);
 
-    unsigned char getWall() const;
+    unsigned short getWall() const;
 
-    void setWall(unsigned char wall);
+    void setWall(unsigned short wall);
 
-    unsigned char getShelf() const;
+    unsigned short getShelf() const;
 
-    void setShelf(unsigned char shelf);
+    void setShelf(unsigned short shelf);
 
-    unsigned char getBook() const;
+    unsigned short getBook() const;
 
-    void setBook(unsigned char book);
+    void setBook(unsigned short book);
 
     unsigned long getSeed() const;
 
@@ -49,9 +49,9 @@ private:
     unsigned short hall;
     unsigned short floor;
     unsigned short room;
-    unsigned char wall; //1-6 TODO add bounds
-    unsigned char shelf; //1-7 TODO add bounds
-    unsigned char book; //1-25 TODO add bounds
+    unsigned short wall; //1-6 TODO add bounds
+    unsigned short shelf; //1-7 TODO add bounds
+    unsigned short book; //1-25 TODO add bounds
     unsigned long seed;
 };
 

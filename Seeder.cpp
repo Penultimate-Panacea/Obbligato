@@ -37,32 +37,32 @@ void Seeder::setRoom(unsigned short room) {
     Seeder::room = room;
 }
 
-unsigned char Seeder::getWall() const {
+unsigned short Seeder::getWall() const {
     return wall;
 }
 
-void Seeder::setWall(unsigned char wall) {
+void Seeder::setWall(unsigned short wall) {
     Seeder::wall = wall;
 }
 
-unsigned char Seeder::getShelf() const {
+unsigned short Seeder::getShelf() const {
     return shelf;
 }
 
-void Seeder::setShelf(unsigned char shelf) {
+void Seeder::setShelf(unsigned short shelf) {
     Seeder::shelf = shelf;
 }
 
-unsigned char Seeder::getBook() const {
+unsigned short Seeder::getBook() const {
     return book;
 }
 
-void Seeder::setBook(unsigned char book) {
+void Seeder::setBook(unsigned short book) {
     Seeder::book = book;
 }
 
-Seeder::Seeder(unsigned short hall, unsigned short floor, unsigned short room, unsigned char wall, unsigned char shelf,
-           unsigned char book) : hall(hall), floor(floor), room(room), wall(wall), shelf(shelf), book(book) {}
+Seeder::Seeder(unsigned short hall, unsigned short floor, unsigned short room, unsigned short wall, unsigned short shelf,
+           unsigned short book) : hall(hall), floor(floor), room(room), wall(wall), shelf(shelf), book(book) {}
 
 Seeder::~Seeder() = default;
 
@@ -92,6 +92,3 @@ void Seeder::setSeed() {
     finalSeed = tempSeed;
     Seeder::seed = finalSeed;
 }
-
-
-
