@@ -30,11 +30,13 @@ int main() {
     for (int i = 0; i < 3201; ++i) {
         std::cout << BaseEightyNine(reRngTone.next()).firstChar();
     }
+    fclose(stdout);
     rlcg::ReversibleLCG reRngTime(testSeeder.getSeed());
     freopen("output.time", "w", stdout);
     for (int i = 0; i < 3201; ++i){
         std::cout << (reRngTime.next() % 10);
     }
+    fclose(stdout);
     ABCFilemaker ABC("output.tone", "output.time", location);
     ABC.makeABCfile();
     return 0;

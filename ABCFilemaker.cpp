@@ -84,7 +84,7 @@ std::string ABCFilemaker::noteTranslate(std::pair<char, char> note) {
 void ABCFilemaker::makeABCfile() {
     freopen("output.abc", "w", stdout);
     std::cout << abcFileHeader();
-
+    fclose(stdout);
 };
 
 std::string ABCFilemaker::abcFileHeader() {
