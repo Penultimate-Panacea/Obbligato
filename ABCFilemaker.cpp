@@ -3,6 +3,7 @@
 //
 
 #include "ABCFilemaker.hpp"
+#include "EquivalenceTables.hpp"
 #include "CustomExceptions.hpp"
 #include <iostream>
 #include <fstream>
@@ -58,16 +59,30 @@ ABCFilemaker::ABCFilemaker(const std::string &timeInputFilePath, const std::stri
     }
     //Merge vectors into notes vector
     std::vector<std::pair<char, char>> merge;
-    merge.reserve(timeFileContents.size());
-    std::transform(timeFileContents.begin(), timeFileContents.end(), toneFileContents.begin(), std::back_inserter(merge),
+    merge.reserve(toneFileContents.size());
+    std::transform(toneFileContents.begin(), toneFileContents.end(), timeFileContents.begin(), std::back_inserter(merge),
                    [](char a, char b) { return std::make_pair(a, b); });
     ABCFilemaker::setNotes(merge);
 }
 
 ABCFilemaker::~ABCFilemaker() = default;
 
-std::string ABCFilemaker::noteTranslate() {
+std::string ABCFilemaker::noteTranslate(std::pair<char, char> note) {
+    ////////////////////////////////////////////////////////////////////////////////
+    /// Translates the raw output of the RCLG to an ABC Note
+    ///
+    /// \param[in] a pair of chars representing the codes for a tone and a time. Tone should be first.
+    /// \param[out] String in the format of a ABC note
+    ///
 
-}
+    std::string abcNote;
+    char tone = note.first;
+    char time = note.second;
+    auto it = std::find(Equivalence::b89CharSetVec.begin(), Equivalence::b89CharSetVec.end(), tone);
+    char index = static_cast<char> (std::distance(Equivalence::b89CharSetVec.begin(), it));
+    abcNote = Equivalence::abcToneStringSetVec.at(index);
+    abcNote + Equivalence::abcToneStringSetVec.at(time);
+    return abcNote;
+};
 
 

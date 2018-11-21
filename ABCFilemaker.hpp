@@ -9,7 +9,7 @@
 #include <string>
 
 class ABCFilemaker {
-    /** \class
+    /** \class ABCFilemaker
      * Creates a .abc file from the output files from main.
      */
 
@@ -21,8 +21,8 @@ private:
     std::string seedLocation; //T:
     char buffer;
     const char key = 'C'; //K:
-    const char timeSig = 'C'; //M:
-    const std::string defaultNoteLength = "1/4"; //L:
+    const char timeSig = 'C'; //
+    const std::string defaultNoteLength = "1"; //L:
     const std::string tuneType = "Obbligato"; //R:
     const char measureLength = 4;
 
@@ -50,7 +50,7 @@ public:
 
     virtual ~ABCFilemaker();
     //Core Methods
-
+    std::string noteTranslate(std::pair<char, char>);
 
 };
 
