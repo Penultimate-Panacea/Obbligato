@@ -29,7 +29,7 @@ int main() {
     for (int i = 0; i < 3201; ++i){
         std::cout << (reRngTime.next() % 10);
     }
-    ABCFilemaker ABC("output.tone", "output.time");
+    ABCFilemaker ABC("output.tone", "output.time","temp");
     return 0;
 }
 
