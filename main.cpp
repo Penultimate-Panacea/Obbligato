@@ -1,5 +1,6 @@
 #include <iostream>
 #include <cstring>
+#include <sstream>
 #include "rlcg.hpp"
 #include "ABCFilemaker.hpp"
 #include "Seeder.h"
@@ -20,6 +21,11 @@ int main() {
     loggingStart();
     Seeder testSeeder(0,0,0,0,0,1);
     rlcg::ReversibleLCG reRngTone(testSeeder.getSeed());
+    //TODO make better toStream and validate output files match seed
+    std::stringstream sstream;
+    sstream << testSeeder;
+    std::string location = sstream.str();
+
     freopen("output.tone", "w", stdout);
     for (int i = 0; i < 3201; ++i) {
         std::cout << BaseEightyNine(reRngTone.next()).firstChar();
@@ -29,7 +35,7 @@ int main() {
     for (int i = 0; i < 3201; ++i){
         std::cout << (reRngTime.next() % 10);
     }
-    ABCFilemaker ABC("output.tone", "output.time","temp");
+    ABCFilemaker ABC("output.tone", "output.time", location);
     return 0;
 }
 

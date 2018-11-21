@@ -20,6 +20,7 @@ private:
     std::string seedLocation; //T:
     const char key = 'C'; //K:
     const char timeSig = 'C'; //
+    const std::string composer = "TODO";
     const std::string defaultNoteLength = "1"; //L:
     const std::string tuneType = "Obbligato"; //R:
     const char measureLength = 4;
@@ -48,8 +49,10 @@ public:
 
     //Core Methods
     void makeABCfile();
+
     std::string noteTranslate(std::pair<char, char>);
 
+    std::string abcFileHeader();
 };
 
 

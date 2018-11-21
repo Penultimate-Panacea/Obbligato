@@ -62,7 +62,7 @@ ABCFilemaker::ABCFilemaker(const std::string &timeInputFilePath, const std::stri
 
 ABCFilemaker::~ABCFilemaker() = default;
 
-void ABCFilemaker::makeABCfile() {};
+
 
 std::string ABCFilemaker::noteTranslate(std::pair<char, char> note) {
     ////////////////////////////////////////////////////////////////////////////////
@@ -81,3 +81,20 @@ std::string ABCFilemaker::noteTranslate(std::pair<char, char> note) {
     return abcNote;
 };
 
+void ABCFilemaker::makeABCfile() {
+    freopen("output.abc", "w", stdout);
+    std::cout << abcFileHeader();
+
+};
+
+std::string ABCFilemaker::abcFileHeader() {
+    std::string header;
+    header + "X: 1\n";
+    header + "T: " + seedLocation + "\n";
+    header + "C: " + composer  + "\n";
+    header + "L: " + defaultNoteLength  + "\n";
+    header + "M: " + timeSig  + "\n";
+    header + "R: " + tuneType  + "\n";
+    header + "K: " + key  + "\n";
+    return header;
+}
