@@ -36,6 +36,7 @@ int main() {
         std::cout << (reRngTime.next() % 10);
     }
     ABCFilemaker ABC("output.tone", "output.time", location);
+    ABC.makeABCfile();
     return 0;
 }
 
