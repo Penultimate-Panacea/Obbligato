@@ -1,6 +1,7 @@
 #include <iostream>
 #include <cstring>
 #include "rlcg.hpp"
+#include "ABCFilemaker.hpp"
 #include "Seeder.h"
 #include "BaseEightyNine.h"
 
@@ -19,15 +20,16 @@ int main() {
     loggingStart();
     Seeder testSeeder(0,0,0,0,0,1);
     rlcg::ReversibleLCG reRngTone(testSeeder.getSeed());
-    freopen("outputTone.txt", "w", stdout);
+    freopen("output.tone", "w", stdout);
     for (int i = 0; i < 3201; ++i) {
         std::cout << BaseEightyNine(reRngTone.next()).firstChar();
     }
     rlcg::ReversibleLCG reRngTime(testSeeder.getSeed());
-    freopen("outputTime.txt", "w", stdout);
+    freopen("output.time", "w", stdout);
     for (int i = 0; i < 3201; ++i){
         std::cout << (reRngTime.next() % 10);
     }
+    ABCFilemaker ABC("output.tone", "output.time");
     return 0;
 }
 

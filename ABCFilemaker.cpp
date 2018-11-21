@@ -9,6 +9,7 @@
 #include <fstream>
 #include <algorithm>
 
+
 const std::vector<std::pair<char, char>> &ABCFilemaker::getNotes() const {
     return notes;
 }
@@ -36,7 +37,6 @@ const std::string &ABCFilemaker::getSeedLocation() const {
 void ABCFilemaker::setSeedLocation(const std::string &seedLocation) {
     ABCFilemaker::seedLocation = seedLocation;
 }
-
 
 ABCFilemaker::ABCFilemaker(const std::string &timeInputFilePath, const std::string &toneInputFilePath)
                                                                 : timeInputFilePath(timeInputFilePath),
@@ -81,5 +81,4 @@ std::string ABCFilemaker::noteTranslate(std::pair<char, char> note) {
     abcNote + Equivalence::abcTimeStringSetVec.at(time);
     return abcNote;
 };
-
 
