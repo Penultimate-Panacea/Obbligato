@@ -17,7 +17,6 @@ private:
     std::vector<std::pair<char, char>> notes; //Joined vector of tones and times as <tone, time>
     std::string timeInputFilePath;
     std::string toneInputFilePath;
-    std::string outputFilePath;
     std::string seedLocation; //T:
     char buffer;
     const char key = 'C'; //K:
@@ -45,11 +44,12 @@ public:
     void setSeedLocation(const std::string &seedLocation);
 
     //Constructors & Destructors
-    ABCFilemaker(const std::string &timeInputFilePath, const std::string &toneInputFilePath,
-                 const std::string &outputFilePath);
+    ABCFilemaker(const std::string &timeInputFilePath, const std::string &toneInputFilePath);
 
     virtual ~ABCFilemaker();
+
     //Core Methods
+    void makeABCfile();
     std::string noteTranslate(std::pair<char, char>);
 
 };

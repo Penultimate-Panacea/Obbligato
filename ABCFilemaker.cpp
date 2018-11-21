@@ -29,10 +29,6 @@ void ABCFilemaker::setToneInputFilePath(const std::string &toneInputFilePath) {
     ABCFilemaker::toneInputFilePath = toneInputFilePath;
 }
 
-void ABCFilemaker::setOutputFilePath(const std::string &outputFilePath) {
-    ABCFilemaker::outputFilePath = outputFilePath;
-}
-
 const std::string &ABCFilemaker::getSeedLocation() const {
     return seedLocation;
 }
@@ -42,10 +38,9 @@ void ABCFilemaker::setSeedLocation(const std::string &seedLocation) {
 }
 
 
-ABCFilemaker::ABCFilemaker(const std::string &timeInputFilePath, const std::string &toneInputFilePath,
-                           const std::string &outputFilePath) : timeInputFilePath(timeInputFilePath),
-                                                                toneInputFilePath(toneInputFilePath),
-                                                                outputFilePath(outputFilePath) {
+ABCFilemaker::ABCFilemaker(const std::string &timeInputFilePath, const std::string &toneInputFilePath)
+                                                                : timeInputFilePath(timeInputFilePath),
+                                                                toneInputFilePath(toneInputFilePath){
     //Load times into char vector
     std::ifstream timeFile(timeInputFilePath, std::ios::binary);
     std::vector<char> timeFileContents((std::istreambuf_iterator<char>(timeFile)),std::istreambuf_iterator<char>());
@@ -66,6 +61,8 @@ ABCFilemaker::ABCFilemaker(const std::string &timeInputFilePath, const std::stri
 }
 
 ABCFilemaker::~ABCFilemaker() = default;
+
+void ABCFilemaker::makeABCfile() {};
 
 std::string ABCFilemaker::noteTranslate(std::pair<char, char> note) {
     ////////////////////////////////////////////////////////////////////////////////
