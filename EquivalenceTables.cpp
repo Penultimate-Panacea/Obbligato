@@ -26,8 +26,8 @@ std::string abcTimeStringSet[10] = {"/64", "/32", "/16", "/8", "/4", "/3", "2", 
 
 std::vector<char> b89CharSetVec (b89CharSet, b89CharSet+ sizeof(b89CharSet) / sizeof(b89CharSet[0]) );
 
-std::vector<char> abcToneStringSetVec (abcToneStringSet, abcToneStringSet+ sizeof(abcToneStringSet)/
+std::vector<std::string> abcToneStringSetVec (abcToneStringSet, abcToneStringSet+ sizeof(abcToneStringSet)/
                                                                            sizeof(abcToneStringSet[0]) );
 
-std::vector<char> abcTimeStringSetVec (abcTimeStringSet, abcTimeStringSet+ sizeof(abcTimeStringSet)/
+std::vector<std::string> abcTimeStringSetVec (abcTimeStringSet, abcTimeStringSet+ sizeof(abcTimeStringSet)/
                                                                            sizeof(abcTimeStringSet[0]));

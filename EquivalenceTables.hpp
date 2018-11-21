@@ -9,13 +9,14 @@
 #include <vector>
 #include <string>
 
-class Equivalence{
+struct Equivalence{
 public:
     static const char b89CharSet[89];
     static const std::vector<char> b89CharSetVec;
     static const std::string abcToneStringSet[89];
-    static const std::vector<char> abcToneStringSetVec;
-    static const std::vector<char> abcTimeStringSetVec;
+    static const std::string abcTimeStringSet[10];
+    static const std::vector<std::string> abcToneStringSetVec;
+    static const std::vector<std::string> abcTimeStringSetVec;
 
 };
 #endif //OBBLIGATO_EQUIVALENCETABLES_HPP
