@@ -41,9 +41,7 @@ public:
     void setSeedLocation(const std::string &seedLocation);
 
     //Constructors & Destructors
-    ABCFilemaker(const std::string &timeInputFilePath, const std::string &toneInputFilePath);
-
-    ABCFilemaker(const std::string &timeInputFilePath, const std::string &toneInputFilePath,
+   ABCFilemaker(const std::string &timeInputFilePath, const std::string &toneInputFilePath,
                  const std::string &seedLocation);
 
     virtual ~ABCFilemaker();

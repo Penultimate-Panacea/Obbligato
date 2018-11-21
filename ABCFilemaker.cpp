@@ -71,14 +71,13 @@ std::string ABCFilemaker::noteTranslate(std::pair<char, char> note) {
     /// \param[in] a pair of chars representing the codes for a tone and a time. Tone should be first.
     /// \param[out] String in the format of a ABC note
     ///
-
     std::string abcNote;
     char tone = note.first;
     char time = note.second;
     auto it = std::find(Equivalence::b89CharSetVec.begin(), Equivalence::b89CharSetVec.end(), tone);
     long index = (std::distance(Equivalence::b89CharSetVec.begin(), it));
     abcNote = Equivalence::abcToneStringSetVec.at(static_cast<unsigned long>(index));
-    abcNote + Equivalence::abcTimeStringSetVec.at(time);
+    abcNote + Equivalence::abcTimeStringSetVec.at(static_cast<unsigned long>(time));
     return abcNote;
 };
 
