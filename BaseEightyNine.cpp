@@ -54,7 +54,7 @@ void BaseEightyNine::setB89(){
 
 unsigned int BaseEightyNine::reduce(unsigned int inputInt){
     cerr << "Reduce called with " << inputInt << " as argument." << endl;
-    char digits = static_cast<char>(inputInt % 89);
+    auto digits = static_cast<char>(inputInt % 89);
     cerr << "Modulo of argument is: " << digits << endl;
     //char equivalent;
     char equivalent = Equivalence::b89CharSet[digits]; //identifies the appropriate digit from the const array
