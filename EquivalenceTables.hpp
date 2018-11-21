@@ -15,8 +15,7 @@ public:
     static const std::vector<char> b89CharSetVec;
     static const std::string abcToneStringSet[89];
     static const std::vector<char> abcToneStringSetVec;
-    static const std::string abcTimeStringSet[10];
     static const std::vector<char> abcTimeStringSetVec;
 
-}
+};
 #endif //OBBLIGATO_EQUIVALENCETABLES_HPP
