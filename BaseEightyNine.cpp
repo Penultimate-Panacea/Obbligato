@@ -3,10 +3,11 @@
 //
 
 #include "BaseEightyNine.h"
-#include "EquivalenceTables.hpp"
+#include "ETable.hpp"
 #include <cmath>
+#include <iostream>
+#include <deque>
 
-using namespace std;
 
 BaseEightyNine::BaseEightyNine(unsigned int base10input) : base10input(base10input) {
     setBase10input(base10input);
@@ -52,13 +53,17 @@ void BaseEightyNine::setB89(){
 }
 
 unsigned int BaseEightyNine::reduce(unsigned int inputInt){
-    cerr << "Reduce called with " << inputInt << " as argument." << endl;
+    const char b89CharSet[89] = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F',
+                           'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V',
+                           'W', 'X', 'Y', 'Z', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l',
+                           'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', '!', '<',
+                           '#', '$', '%', '&', '>', '(', ')', '*', '+', ',', '-', '.', '/', '[', '?', ']',
+                           '^', '_', '`', '{', '|', '}', '~', '@', '\\'};
+    std::cerr << "Reduce called with " << inputInt << " as argument." << std::endl;
     auto digits = static_cast<char>(inputInt % 89);
-    cerr << "Modulo of argument is: " << static_cast<int>(digits) << endl;
-    //char equivalent;
-    //auto eTable = EquivalenceTables::getB89CharSet();
-    char equivalent = Equivalence::b89CharSet[digits]; //identifies the appropriate digit from the const array
-    cerr << "The Equivalent base89 digit is: " << equivalent << " " << endl;
+    std::cerr << "Modulo of argument is: " << static_cast<int>(digits) << std::endl;
+    char equivalent = b89CharSet[digits]; //identifies the appropriate digit from the const array
+    std::cerr << "The Equivalent base89 digit is: " << equivalent << " " << std::endl;
     this->b89.insert(this->b89.begin(),equivalent); //adds the digit to the front of the b89 vector
     return (unsigned int)floor(inputInt/89);
 }
@@ -71,7 +76,7 @@ void BaseEightyNine::printEightyEight(){
     cout << out;
 }
 */
-const deque<char> &BaseEightyNine::getB89() const {
+const std::deque<char> &BaseEightyNine::getB89() const {
     return b89;
 }
 

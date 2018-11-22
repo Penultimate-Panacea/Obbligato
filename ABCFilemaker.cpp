@@ -6,6 +6,7 @@
 #include "CustomExceptions.hpp"
 #include <cmath>
 #include <fstream>
+#include <algorithm>
 
 
 const std::vector<std::pair<char, char>> &ABCFilemaker::getNotes() const {
@@ -72,14 +73,31 @@ std::string ABCFilemaker::noteTranslate(std::pair<char, char> note) {
     std::string abcNote;
     char tone = note.first;
     char time = note.second;
-    auto it = std::find(Equivalence::b89CharSetVec.begin(), Equivalence::b89CharSetVec.end(), tone);
-    long index = (std::distance(Equivalence::b89CharSetVec.begin(), it));
-    abcNote = Equivalence::abcToneStringSetVec.at(static_cast<unsigned long>(index));
-    abcNote + Equivalence::abcTimeStringSetVec.at(static_cast<unsigned long>(time));
+    const std::vector<char> b89CharSetVec {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F',
+                                           'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V',
+                                           'W', 'X', 'Y', 'Z', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l',
+                                           'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', '!', '<',
+                                           '#', '$', '%', '&', '>', '(', ')', '*', '+', ',', '-', '.', '/', '[', '?', ']',
+                                           '^', '_', '`', '{', '|', '}', '~', '@', '\\'};
+    const std::vector<std::string> abcTimeStringSetVec =  {"/64", "/32", "/16", "/8", "/4", "/3", "2", "", "2", "3"};
+    const std::vector<std::string> abcToneStringSetVec = {"A,,,,", "^A,,,,","B,,,,", "C,,,,","^C,,,,","D,,,","^D,,,","E,,,",
+                                                          "F,,,", "^F,,,", "G,,,", "^G,,,", "A,,,", "^A,,,", "B,,,", "C,,,",
+                                                          "^C,,,", "D,,", "^D,,", "E,,", "F,,", "^F,,", "G,,", "^G,,", "A,,",
+                                                          "^A,,", "B,,", "C,,", "^C,,", "D,", "^D,", "E,", "F,", "^F,", "G",
+                                                          "^G", "A", "^A", "B", "C", "^C", "D", "^D", "E", "F", "^F", "G",
+                                                          "^G", "A", "^A", "B", "c", "^c", "d", "^d", "e", "f", "^f", "g",
+                                                          "^g", "a", "^a", "b", "c'", "^c'", "d'", "^d'", "e'", "f'", "^f'",
+                                                          "g'", "^g'","a'", "^a'", "b'", "c''", "^c''", "d''", "^d''", "e''",
+                                                          "f''", "^f''", "g''", "^g''", "a''", "^a''", "b''", "c'''", "z"};
+    auto it = std::find(b89CharSetVec.begin(), b89CharSetVec.end(), tone);
+    long index = (std::distance(b89CharSetVec.begin(), it));
+    abcNote = abcToneStringSetVec.at(static_cast<unsigned long>(index));
+    abcNote + abcTimeStringSetVec.at(static_cast<unsigned long>(time));
     return abcNote;
 };
 
 void ABCFilemaker::makeABCfile() {
+    std::cout << noteTranslate(notes[2]);
     std::string header = abcFileHeader();
     std::string music = abcMusic();
     std::string closer = abcCloser();
@@ -87,7 +105,7 @@ void ABCFilemaker::makeABCfile() {
     file << header;
     file << music;
     file << closer;
-    //fclose(stdout);
+
 
 };
 

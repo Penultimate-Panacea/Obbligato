@@ -19,8 +19,8 @@ private:
     std::string toneInputFilePath;
     std::string seedLocation; //T:
     const std::string key = "C"; //K:
-    const std::string timeSig = "4/4"; //
-    const std::string composer = "TODO";
+    const std::string timeSig = "4/4"; //M:
+    const std::string composer = "TODO"; //C:
     const std::string defaultNoteLength = "1"; //L:
     const std::string tuneType = "Obbligato"; //R:
     const char measureLength = 4;
