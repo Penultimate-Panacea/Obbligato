@@ -33,6 +33,8 @@ private:
 
     std::string abcCloser();
 
+    std::vector<char> readoutput(std::string file);
+
 public:
     //Setters & Getters
     const std::vector<std::pair<char, char>> &getNotes() const;
