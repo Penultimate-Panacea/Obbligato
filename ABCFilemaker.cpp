@@ -3,12 +3,9 @@
 //
 
 #include "ABCFilemaker.hpp"
-#include "EquivalenceTables.hpp"
 #include "CustomExceptions.hpp"
-#include <iostream>
 #include <cmath>
 #include <fstream>
-#include <algorithm>
 
 
 const std::vector<std::pair<char, char>> &ABCFilemaker::getNotes() const {
@@ -86,7 +83,7 @@ void ABCFilemaker::makeABCfile() {
     std::string header = abcFileHeader();
     std::string music = abcMusic();
     std::string closer = abcCloser();
-    std::ofstream file("output.abc");
+    std::ofstream file("output2.abc");
     file << header;
     file << music;
     file << closer;
@@ -110,13 +107,10 @@ std::string ABCFilemaker::abcFileHeader() {
 std::string ABCFilemaker::abcMusic(){
     std::string music;
     unsigned long numberOfABCChars = notes.size() + static_cast<unsigned long>(std::ceil(notes.size()/measureLength));
-    for (unsigned long i = 0; i < numberOfABCChars; ++i) {
-        if(i % measureLength == 0 && i != 0){
-            music.append("|");
-        } else{
-            std::string note = noteTranslate(notes.at(i));
-            music.append(note);
-        }
+    for (unsigned long i = 0; i < numberOfABCChars-1; i++) {
+        std::string note = noteTranslate(notes[i]);
+        music.append(note);
+        if(i % measureLength == measureLength-1){music.append("|");}
     }
     return music;
 };
