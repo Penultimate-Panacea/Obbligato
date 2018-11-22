@@ -5,7 +5,6 @@
 #include "BaseEightyNine.h"
 #include "EquivalenceTables.hpp"
 #include <cmath>
-#include <iostream>
 
 using namespace std;
 
@@ -55,7 +54,7 @@ void BaseEightyNine::setB89(){
 unsigned int BaseEightyNine::reduce(unsigned int inputInt){
     cerr << "Reduce called with " << inputInt << " as argument." << endl;
     auto digits = static_cast<char>(inputInt % 89);
-    cerr << "Modulo of argument is: " << digits << endl;
+    cerr << "Modulo of argument is: " << static_cast<int>(digits) << endl;
     //char equivalent;
     //auto eTable = EquivalenceTables::getB89CharSet();
     char equivalent = Equivalence::b89CharSet[digits]; //identifies the appropriate digit from the const array
