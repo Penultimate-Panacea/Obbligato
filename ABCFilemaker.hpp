@@ -25,6 +25,14 @@ private:
     const std::string tuneType = "Obbligato"; //R:
     const char measureLength = 4;
 
+    std::string noteTranslate(std::pair<char, char>);
+
+    std::string abcFileHeader();
+
+    std::string abcMusic();
+
+    std::string abcCloser();
+
 public:
     //Setters & Getters
     const std::vector<std::pair<char, char>> &getNotes() const;
@@ -50,9 +58,7 @@ public:
     //Core Methods
     void makeABCfile();
 
-    std::string noteTranslate(std::pair<char, char>);
 
-    std::string abcFileHeader();
 };
 
 

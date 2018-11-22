@@ -6,6 +6,7 @@
 #include "EquivalenceTables.hpp"
 #include "CustomExceptions.hpp"
 #include <iostream>
+#include <cmath>
 #include <fstream>
 #include <algorithm>
 
@@ -83,10 +84,14 @@ std::string ABCFilemaker::noteTranslate(std::pair<char, char> note) {
 
 void ABCFilemaker::makeABCfile() {
     std::string header = abcFileHeader();
-    //freopen("output.abc", "w", stdout);
+    std::string music = abcMusic();
+    std::string closer = abcCloser();
     std::ofstream file("output.abc");
     file << header;
+    file << music;
+    file << closer;
     //fclose(stdout);
+
 };
 
 std::string ABCFilemaker::abcFileHeader() {
@@ -100,4 +105,24 @@ std::string ABCFilemaker::abcFileHeader() {
     header.append("R: " + tuneType  + "\n");
     header.append("K: " + key  + "\n");
     return header;
+}
+
+std::string ABCFilemaker::abcMusic(){
+    std::string music;
+    unsigned long numberOfABCChars = notes.size() + static_cast<unsigned long>(std::ceil(notes.size()/measureLength));
+    for (unsigned long i = 0; i < numberOfABCChars; ++i) {
+        if(i % measureLength == 0 && i != 0){
+            music.append("|");
+        } else{
+            std::string note = noteTranslate(notes.at(i));
+            music.append(note);
+        }
+    }
+    return music;
+};
+
+std::string ABCFilemaker::abcCloser(){
+    std::string closer;
+    closer.append("]");
+    return closer;
 }
