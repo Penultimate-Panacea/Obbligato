@@ -7,6 +7,7 @@
 #include <cmath>
 #include <fstream>
 #include <algorithm>
+#include <iostream>
 
 
 const std::vector<std::pair<char, char>> &ABCFilemaker::getNotes() const {
@@ -73,6 +74,7 @@ std::string ABCFilemaker::noteTranslate(std::pair<char, char> note) {
     std::string abcNote;
     char tone = note.first;
     char time = note.second;
+    //This should be in a const global file
     const std::vector<char> b89CharSetVec {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F',
                                            'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V',
                                            'W', 'X', 'Y', 'Z', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l',
@@ -89,6 +91,7 @@ std::string ABCFilemaker::noteTranslate(std::pair<char, char> note) {
                                                           "^g", "a", "^a", "b", "c'", "^c'", "d'", "^d'", "e'", "f'", "^f'",
                                                           "g'", "^g'","a'", "^a'", "b'", "c''", "^c''", "d''", "^d''", "e''",
                                                           "f''", "^f''", "g''", "^g''", "a''", "^a''", "b''", "c'''", "z"};
+    //End should be in a const global file
     auto it = std::find(b89CharSetVec.begin(), b89CharSetVec.end(), tone);
     long index = (std::distance(b89CharSetVec.begin(), it));
     abcNote = abcToneStringSetVec.at(static_cast<unsigned long>(index));
@@ -97,14 +100,15 @@ std::string ABCFilemaker::noteTranslate(std::pair<char, char> note) {
 };
 
 void ABCFilemaker::makeABCfile() {
-    std::cout << noteTranslate(notes[2]);
+    std::cerr << noteTranslate(notes[2]); //Test if noteTranslate is working.
     std::string header = abcFileHeader();
     std::string music = abcMusic();
     std::string closer = abcCloser();
-    std::ofstream file("output2.abc");
-    file << header;
-    file << music;
-    file << closer;
+    freopen("output.abc", "w", stdout);
+    std::cout << header;
+    std::cout << music;
+    std::cout << closer;
+    fclose(stdout);
 
 
 };
