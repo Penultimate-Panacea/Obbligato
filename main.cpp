@@ -17,15 +17,16 @@ int main() {
     std::string location = sstream.str();
     std::cerr << location;
     freopen("output.tone", "w", stdout);
-    for (int i = 0; i < 3201; ++i) {
+    for (int i = 0; i < 3200; i++) {
         std::cout << BaseEightyNine(reRngTone.next()).firstChar();
     }
     fclose(stdout);
-    std::cout << "test";
+    //
     rlcg::ReversibleLCG reRngTime(testSeeder.getSeed());
     freopen("output.time", "w", stdout);
-    for (int i = 0; i < 3201; ++i){
-        std::cout << (reRngTime.next() % 10);
+    for (int i = 0; i < 3200; i++){
+        int num = reRngTime.next() % 9;
+        std::cout << (num);
     }
     fclose(stdout);
     std::cout << "test";
