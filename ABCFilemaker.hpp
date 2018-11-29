@@ -33,7 +33,9 @@ private:
 
     std::string abcCloser();
 
-    std::vector<char> readoutput(std::string file);
+    std::vector<char> readTone();
+
+    std::vector<char> readTime();
 
 public:
     //Setters & Getters

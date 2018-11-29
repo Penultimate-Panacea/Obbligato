@@ -38,16 +38,29 @@ void ABCFilemaker::setSeedLocation(const std::string &seedLocation) {
     ABCFilemaker::seedLocation = seedLocation;
 }
 
-std::vector<char> ABCFilemaker::readoutput(std::string filename) {
+std::vector<char> ABCFilemaker::readTone() {
     std::vector<char> outputVec;
-    FILE *fp = fopen("test.txt","r");
+    FILE *fp = fopen("output.tone", "r");
+    if (fp == nullptr){throw;}
+    do {
+        int c = (fgetc(fp));
+        outputVec.emplace_back(c);
+        // Checking for end of file
+        if (feof(fp)){break;}
+    } while(true);
+    fclose(fp);
+    return outputVec;
+}
+
+std::vector<char> ABCFilemaker::readTime() {
+    std::vector<char> outputVec;
+    FILE *fp = fopen("output.time", "r");
     if (fp == nullptr){throw;}
     do {
        char c = static_cast<char>(fgetc(fp));
        outputVec.emplace_back(c);
         // Checking for end of file
         if (feof(fp)){break;}
-
     } while(true);
     fclose(fp);
     return outputVec;
@@ -57,8 +70,8 @@ ABCFilemaker::ABCFilemaker(const std::string &timeInputFilePath, const std::stri
                            const std::string &seedLocation) : timeInputFilePath(timeInputFilePath),
                                                               toneInputFilePath(toneInputFilePath),
                                                               seedLocation(seedLocation) {
-    std::vector<char> timeFileContents = readoutput(timeInputFilePath);
-    std::vector<char> toneFileContents = readoutput(toneInputFilePath);
+    std::vector<char> timeFileContents = readTime();
+    std::vector<char> toneFileContents = readTone();
     //Verify the vectors are the same length
     if (timeFileContents.size() != toneFileContents.size()){
         throw CustomException::TempFileLengthMismatch();
