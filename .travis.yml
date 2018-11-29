@@ -9,3 +9,6 @@ after_success:
 - lcov --list coverage.info #debug info
 # Uploading report to CodeCov
 - bash <(curl -s https://codecov.io/bash) || echo "Codecov did not collect coverage reports"
+script: make
+# script: make && make tests 
+# activate the above once tests are written
