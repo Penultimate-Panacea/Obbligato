@@ -1,5 +1,5 @@
 # Obbligato
-[![Build Status](https://travis-ci.org/<github username>/<repo name>.svg?branch=master)](https://travis-ci.org/<github username>/<repo name>)
+![Build Status](https://travis-ci.org/Penultimate-Panacea/Obbligato.svg?branch=master)
 
 [![Coverage Status](https://coveralls.io/repos/github/<github username>/<repo name>/badge.svg?branch=master)](https://coveralls.io/github/<github username>/<repo name>?branch=master)
 
