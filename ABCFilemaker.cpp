@@ -89,7 +89,7 @@ ABCFilemaker::~ABCFilemaker() = default;
 
 
 std::string ABCFilemaker::noteTranslate(std::pair<char, char> note) {
-    ////////////////////////////////////////////////////////////////////////////////
+    /////////////////////////////////////////////////////////////////////////////////////////////////
     /// Translates the raw output of the RCLG to an ABC Note
     ///
     /// \param[in] a pair of chars representing the codes for a tone and a time. Tone should be first.
@@ -105,7 +105,7 @@ std::string ABCFilemaker::noteTranslate(std::pair<char, char> note) {
                                            'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', '!', '<',
                                            '#', '$', '%', '&', '>', '(', ')', '*', '+', ',', '-', '.', '/', '[', '?', ']',
                                            '^', '_', '`', '{', '|', '}', '~', '@', '\\'};
-    const std::vector<std::string> abcTimeStringSetVec =  {"/64", "/32", "/16", "/8", "/4", "/3", "2", "", "2", "3"};
+    const std::vector<std::string> abcTimeStringSetVec =  {"/64", "/32", "/16", "/8", "/4", "/3", "/2", "", "2", "3"};
     const std::vector<std::string> abcToneStringSetVec = {"A,,,,", "^A,,,,","B,,,,", "C,,,,","^C,,,,","D,,,","^D,,,","E,,,",
                                                           "F,,,", "^F,,,", "G,,,", "^G,,,", "A,,,", "^A,,,", "B,,,", "C,,,",
                                                           "^C,,,", "D,,", "^D,,", "E,,", "F,,", "^F,,", "G,,", "^G,,", "A,,",
