@@ -10,10 +10,10 @@
 
 
 class BaseEightyNine {
-public:
 private:
     unsigned int base10input; //
     std::deque<char> b89; //Raw form of the b89
+
 public:
     explicit BaseEightyNine(unsigned int base10input = 0);
 
